@@ -1,15 +1,14 @@
-import './CampoTexto.css'
+import "./CampoTexto.css";
 
 const CampoTexto = (props) => {
+  const placeholderMidifcada = `${props.placeholder}...`;
 
-    const placeholderMidifcada = `${props.placeholder}...`
+  return (
+    <div className="campo-texto">
+      <label>{props.label}</label>
+      <input required={props.obrigatorio} placeholder={placeholderMidifcada} />
+    </div>
+  );
+};
 
-    return(
-        <div className="campo-texto">
-            <label>{props.label}</label>
-            <input placeholder={placeholderMidifcada}/>
-        </div>
-    )
-}
-
-export default CampoTexto
+export default CampoTexto;
